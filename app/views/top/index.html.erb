@@ -1,0 +1,14 @@
+<!-- <h1><%= @message %></h1>
+<p>これからRailsの勉強を始めます</p> -->
+
+<!-- <% 5.times do |x| %>
+<h2>見出し</h2>
+<p>ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
+<%= link_to "もっと読む", "#" %> </p>
+<% end %> -->
+
+<% @articles.each do |article| %>
+<h2><%= article.title %> </h2>
+<p><%= truncate(article.body, length: 80) %>
+<%= link_to "もっと読む" , article %></p>
+<% end %>

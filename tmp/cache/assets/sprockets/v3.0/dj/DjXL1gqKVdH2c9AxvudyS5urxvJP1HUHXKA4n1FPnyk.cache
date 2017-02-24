@@ -1,0 +1,16 @@
+I"®(function() {
+  $(document).on("ready page:load", function() {
+    var change_expired_at;
+    change_expired_at = function() {
+      if ($("#article_no_expiration").prop("checked")) {
+        return $("#article_expired_at").hide();
+      } else {
+        return $("#article_expired_at").show();
+      }
+    };
+    $("#article_no_expiration").bind("click", change_expired_at);
+    return change_expired_at();
+  });
+
+}).call(this);
+:ET
